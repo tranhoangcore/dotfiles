@@ -1,0 +1,4 @@
+#Change number 
+find ~/.SpaceVim/ -type f | xargs grep spacevim_relativenumber
+.SpaceVim//autoload/SpaceVim.vim
+let g:spacevim_relativenumber          = 1

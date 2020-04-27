@@ -1,0 +1,13 @@
+OS: Archlinux
+Shell: zsh
+File Manager: ranger, nnn | spacfm, pcmanfm, Nemo
+Editor: neovim, emacs, Visual Code
+Mardown: Typora
+Music Player: ebutuoy-spm, mpd
+Image Viewer: feh, xnviewmp, sxiv.
+Latex: texmaker
+PDF: mupdf, zuthura
+Terminal: kitty, st, alacritty
+Browser: qtile, qutebrowser
+IRC: weechat
+Conky: conky-lua-nv

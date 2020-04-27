@@ -1,0 +1,13 @@
+alias r='ranger'
+alias ok='ping google.com'
+alias vim='nvim'
+alias cclip='xclip -i -selection clipboard'
+alias ps_mem='sudo ps_mem'
+alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+alias update='sudo apt update && sudo apt upgrade'
+#alias cp='advcp -g'
+#alias mv='advmv -g'
+
+#What is dns website?
+alias dns="dnscrypt-proxy -resolve"
+
