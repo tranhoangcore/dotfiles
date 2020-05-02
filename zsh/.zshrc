@@ -369,10 +369,15 @@ clear
 export VISUAL="nvim"
 export EDITOR="nvim"
 
-
+# IBus
 export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+# Dành cho những phần mềm dựa trên qt4
+export QT4_IM_MODULE=ibus
+# Dành cho những phần mềm dùng thư viện đồ họa clutter
+export CLUTTER_IM_MODULE=ibus
+ibus-daemon -drx
 
 #export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)
 #export TERM=screen-256color       # for a tmux -2 session (also for screen)
