@@ -165,6 +165,7 @@ plugins=(
     scala
     screen
     sh-dircolors-solarized
+    ssh-agent
     stack
     sudo
     supervisor

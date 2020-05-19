@@ -38,10 +38,9 @@ default_floating_border normal 0
 
 # start a terminal
 #bindsym $mod+Return exec termite
-bindsym $mod+Return exec urxvt 
 
 bindsym $mod+Shift+Return exec deepin-terminal
-bindsym $mod+Control+Return exec kitty 
+bindsym $mod+Return exec kitty 
 bindsym Control+Mod1+t exec st
 
 # kill focused window
@@ -58,7 +57,7 @@ bindsym $mod+Control+q [class=”.*”] kill
 #bindsym $mod+9 exec --no-startup-id sh ~/.config/i3/lock.sh
 #Use black screen
 #bindsym $mod+9 exec --no-startup-id i3lock -c 475263 -d 
-bindsym $mod+9 exec --no-startup-id i3lock -i /run/media/core/SOFTS/Giai_tri/Wallpaper/Thinkpad.png
+bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1656944.png 
 
 
 # Start Rofi (a program launcher, ssh, window switcher)
@@ -416,11 +415,11 @@ mode "$mode_gaps_outer" {
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-exec_always --no-startup-id compton -f
-exec_always --no-startup-id guake 
+#exec_always --no-startup-id compton -f
+#exec_always --no-startup-id guake 
 
 #Wallpaper
-exec --no-startup-id feh --bg-scale "/run/media/core/SOFTS/Giai_tri/Wallpaper/wallhaven-517055.jpg"
+#exec --no-startup-id feh --bg-scale "/run/media/core/SOFTS/Giai_tri/Wallpaper/wallhaven-517055.jpg"
 
 
 
@@ -432,8 +431,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 #Touchpad:
-exec --no-startup-id xinput set-prop 'DLLC6AE:00 06CB:75BF Touchpad' 'libinput Tapping Enabled' 1
-exec --no-startup-id xinput set-prop 'DLLC6AE:00 06CB:75BF Touchpad' 'libinput Natural Scrolling Enabled' 1
+#exec --no-startup-id xinput set-prop 'DLLC6AE:00 06CB:75BF Touchpad' 'libinput Tapping Enabled' 1
+#exec --no-startup-id xinput set-prop 'DLLC6AE:00 06CB:75BF Touchpad' 'libinput Natural Scrolling Enabled' 1
 
 
 
