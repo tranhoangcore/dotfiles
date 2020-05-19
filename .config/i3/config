@@ -354,9 +354,9 @@ bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym $mod+Print --release exec --no-startup-id scrot -w
-bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/' && notify-send "Screenshot Taken"
-bindsym mod1+Control+a  --release exec --no-startup-id scrot -s -e 'mv $f ~/Pictures/' && notify-send "Screenshot Taken"
-bindsym Control+Print  --release exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/' && notify-send "Screenshot Taken"
+bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshot' && notify-send "Screenshot Taken"
+bindsym mod1+Control+a  --release exec --no-startup-id scrot -s -e 'mv $f ~/Pictures/Screenshot' && notify-send "Screenshot Taken"
+bindsym Control+Print  --release exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/Screenshot' && notify-send "Screenshot Taken"
 
 
 
