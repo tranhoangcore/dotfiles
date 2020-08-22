@@ -118,6 +118,7 @@ plugins=(
     encode64
     extract
     fancy-ctrl-z
+    fzf
     gcloud
     gem
     git
@@ -349,8 +350,12 @@ zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 # direnv
 eval "$(direnv hook zsh)"
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#fzf
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 
 ### Keychain ###
 # Let re-use ssh-agent and/or gpg-agent between logins
@@ -393,19 +398,23 @@ export LC_CTYPE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 #export LC_ALL="en_US.UTF-8"
 
-# #Kitty Terminal
-# autoload -Uz compinit
-# compinit
-# kitty + complete setup zsh | source /dev/stdin
+ #Kitty Terminal
+autoload -Uz compinit
+compinit
+kitty + complete setup zsh | source /dev/stdin
+
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dawt.useSystemAAFontSettings=gasp -Dsun.java2d.xrender=true"
 
 
-
-_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
 _SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS"
 unset _JAVA_OPTIONS
 alias java='java "$_SILENT_JAVA_OPTIONS"'
 
+
+
+#VAAPI
+VAAPI_MPEG4_ENABLED=true
 
 # End of ~/.zshrc
 

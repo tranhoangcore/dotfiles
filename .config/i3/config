@@ -39,9 +39,9 @@ default_floating_border normal 0
 # start a terminal
 #bindsym $mod+Return exec termite
 
-bindsym $mod+Shift+Return exec deepin-terminal
-bindsym $mod+Return exec kitty 
-bindsym Control+Mod1+t exec st
+bindsym $mod+Shift+Return exec kitty 
+#bindsym $mod+Return exec kitty 
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -311,8 +311,8 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
 
 # Screen brightness controls with notification
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 
 

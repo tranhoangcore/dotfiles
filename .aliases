@@ -1,6 +1,7 @@
 alias r='ranger'
 alias ok='ping google.com'
 alias vim='nvim'
+alias cat='bat'
 alias cclip='xclip -i -selection clipboard'
 alias ps_mem='sudo ps_mem'
 alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
@@ -11,3 +12,8 @@ alias update='sudo apt update && sudo apt upgrade'
 #What is dns website?
 alias dns="dnscrypt-proxy -resolve"
 
+// For Googler
+// for Google Videos (any source)
+alias v='googler -V --url-handler mpv $argv'
+// for site-specific videos (e.g. YouTube)
+alias yv='googler -w youtube.com --url-handler mpv $argv'

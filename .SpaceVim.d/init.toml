@@ -20,8 +20,9 @@
     # install nerd fonts
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
-    buffer_index_type = 4
+    buffer_index_type = 1
     relativenumber = true
+    filemanager = "nerdtree"
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true 
     autocomplete_method = "coc"
@@ -50,6 +51,8 @@
 [[layers]]
   name = "format"
 
+[[layers]]
+  name = "colorscheme"
 
 [[layers]]
   name = "tools"
@@ -107,8 +110,6 @@
 [[layers]]
   name = "lang#markdown"
 
-[[layers]]
-  name = "lang#html"
 
 [[layers]]
   name = "lang#latex"
@@ -130,3 +131,8 @@
   name = 'shell'
   default_position = 'top'
   default_height = 30
+
+
+[[custom_plugins]]
+  name = 'ryanoasis/vim-devicons'
+  merged = 0

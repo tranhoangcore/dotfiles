@@ -51,7 +51,6 @@ values."
      html
      javascript
      json
-     kubernetes
      latex
      lsp
      major-modes
@@ -62,7 +61,6 @@ values."
      pdf
      puppet
      python
-     ranger
      react
      ruby
      ruby-on-rails
@@ -87,7 +85,7 @@ values."
              colors-enable-nyan-cat-progress-bar t
              colors-colorize-identifiers 'variables)
      (c-c++ :variables
-            c-c++-backend 'lsp-clangd
+            c-c++-backend 'lsp-ccls
             c++-enable-organize-includes-on-save t
             c-c++-enable-clang-format-on-save t
             c-c++-lsp-enable-semantic-highlight 'rainbow)
@@ -105,10 +103,7 @@ values."
                       auto-completion-enable-sort-by-usage t
                       auto-completion-tab-key-behavior 'complete
                       spacemacs-default-company-backends '(company-files company-capf))
-     (ranger :variables
-             ranger-show-preview t)
      (yaml :variables yaml-enable-lsp t)
-     (docker :variables docker-dockerfile-backend 'lsp)
      (terraform :variables terraform-auto-format-on-save t))
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -400,8 +395,7 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (yapfify yaml-mode xterm-color x86-lookup web-mode web-beautify vmd-mode vagrant-tramp vagrant unfill toml-mode tide typescript-mode terraform-mode hcl-mode tagedit systemd sql-indent smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv ranger rainbow-mode rainbow-identifiers racer pyvenv pytest pyim pyim-basedict xr pyenv-mode py-isort puppet-mode pug-mode projectile-rails rake inflections pip-requirements pangu-spacing orgit nginx-mode nasm-mode mwim multi-term mmm-mode minitest markdown-toc magit-gitflow magit-popup livid-mode skewer-mode simple-httpd live-py-mode js2-refactor multiple-cursors js2-mode js-doc jinja2-mode intero hy-mode hlint-refactor hindent helm-pydoc helm-hoogle helm-gitignore helm-css-scss helm-company helm-c-yasnippet haskell-snippets haml-mode go-guru go-eldoc gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-rust flycheck-pos-tip flycheck-haskell flycheck find-by-pinyin-dired feature-mode evil-magit magit git-commit with-editor eshell-z eshell-prompt-extras esh-help emoji-cheat-sheet-plus emmet-mode dockerfile-mode docker transient tablist json-mode docker-tramp json-snatcher json-reformat disaster diff-hl cython-mode csv-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp pos-tip company-go go-mode company-ghci company-ghc ghc haskell-mode company-emoji company-cabal company-c-headers company-auctex company-ansible company-anaconda company color-identifiers-mode coffee-mode cmm-mode cmake-mode clang-format chruby cargo markdown-mode rust-mode bundler inf-ruby auto-yasnippet yasnippet auto-dictionary auctex ansible-doc ansible anaconda-mode pythonic adoc-mode markup-faces ace-pinyin pinyinlib ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+   '(xkcd typit mmt sudoku prettier-js pacmacs mode-icons highlight-indent-guides go-playground gotest flycheck-golangci-lint engine-mode beacon all-the-icons-ivy ivy all-the-icons-dired all-the-icons memoize 2048-game yapfify yaml-mode xterm-color x86-lookup web-mode web-beautify vmd-mode vagrant-tramp vagrant unfill toml-mode tide typescript-mode terraform-mode hcl-mode tagedit systemd sql-indent smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv ranger rainbow-mode rainbow-identifiers racer pyvenv pytest pyim pyim-basedict xr pyenv-mode py-isort puppet-mode pug-mode projectile-rails rake inflections pip-requirements pangu-spacing orgit nginx-mode nasm-mode mwim multi-term mmm-mode minitest markdown-toc magit-gitflow magit-popup livid-mode skewer-mode simple-httpd live-py-mode js2-refactor multiple-cursors js2-mode js-doc jinja2-mode intero hy-mode hlint-refactor hindent helm-pydoc helm-hoogle helm-gitignore helm-css-scss helm-company helm-c-yasnippet haskell-snippets haml-mode go-guru go-eldoc gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-rust flycheck-pos-tip flycheck-haskell flycheck find-by-pinyin-dired feature-mode evil-magit magit git-commit with-editor eshell-z eshell-prompt-extras esh-help emoji-cheat-sheet-plus emmet-mode dockerfile-mode docker transient tablist json-mode docker-tramp json-snatcher json-reformat disaster diff-hl cython-mode csv-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp pos-tip company-go go-mode company-ghci company-ghc ghc haskell-mode company-emoji company-cabal company-c-headers company-auctex company-ansible company-anaconda company color-identifiers-mode coffee-mode cmm-mode cmake-mode clang-format chruby cargo markdown-mode rust-mode bundler inf-ruby auto-yasnippet yasnippet auto-dictionary auctex ansible-doc ansible anaconda-mode pythonic adoc-mode markup-faces ace-pinyin pinyinlib ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
