@@ -22,11 +22,10 @@
     statusline_inactive_separator = "arrow"
     buffer_index_type = 1
     relativenumber = true
-    filemanager = "nerdtree"
+#filemanager = "nerdtree"
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true 
     autocomplete_method = "coc"
-
 
 # Enable autocomplete layer
 #[[layers]]
@@ -99,6 +98,7 @@
 
 [[layers]]
   name = "lang#c"
+  enable_clang_syntax_highlight = "true"
   
 [[layers]]
   name = "lang#python"

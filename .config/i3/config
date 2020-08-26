@@ -54,15 +54,16 @@ bindsym $mod+Control+q [class=”.*”] kill
 
 #Lock
 #Use blur 
-#bindsym $mod+9 exec --no-startup-id sh ~/.config/i3/lock.sh
+bindsym $mod+9 exec --no-startup-id sh ~/.config/i3/lock.sh
 #Use black screen
 #bindsym $mod+9 exec --no-startup-id i3lock -c 475263 -d 
-bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1656944.png 
+#bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1656944.png
 
 
 # Start Rofi (a program launcher, ssh, window switcher)
 # https://davedavenport.github.io/rofi
-bindsym $mod+d exec --no-startup-id rofi -show run
+#bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec rofi -show drun -eh 2 -bw 0 
 #bindsym $mod+d exec --no-startup-id dmenu_extended_run
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -350,7 +351,6 @@ bindsym $mod+Shift+F3 exec pcmanfm
 bindsym $mod+Shift+f exec spacefm
 bindsym $mod+c exec code
 bindsym $mod+m exec thunderbird
-bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym $mod+Print --release exec --no-startup-id scrot -w
@@ -370,8 +370,8 @@ smart_gaps on
 smart_borders on
 
 # Global gaps size
-gaps inner 0
-gaps outer 0
+gaps inner 25
+gaps outer 47 
 
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -421,6 +421,10 @@ mode "$mode_gaps_outer" {
 #Wallpaper
 #exec --no-startup-id feh --bg-scale "/run/media/core/SOFTS/Giai_tri/Wallpaper/wallhaven-517055.jpg"
 
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/wallpaper.jpg
+
+exec_always --no-startup-id picom --experimental-backends 
+exec_always --no-startup-id dunst
 
 
 #Tray
@@ -429,6 +433,13 @@ exec_always --no-startup-id nm-applet
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+
+
+
+############## to start rofi widgets ###############
+
+bindsym $mod+Shift+s exec ~/.config/rofi/rofi_menu/powermenu.sh 
+bindsym $mod+Shift+w exec ~/.config/rofi/rofi_menu/network.sh 
 
 #Touchpad:
 #exec --no-startup-id xinput set-prop 'DLLC6AE:00 06CB:75BF Touchpad' 'libinput Tapping Enabled' 1
