@@ -50,8 +50,6 @@
 [[layers]]
   name = "format"
 
-[[layers]]
-  name = "colorscheme"
 
 [[layers]]
   name = "tools"

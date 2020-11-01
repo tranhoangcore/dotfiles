@@ -389,8 +389,8 @@ ibus-daemon -drx
 #export TERM=screen-256color       # for a tmux -2 session (also for screen)
 #export TERM=rxvt-unicode-256color # for a colorful rxvt unicode session
 
-#export TERM=deepin-terminals
-#export GITHUB_TOKEN="a9c5b8ee32a25c4d8d38298123c2828e0a9ae19f"
+export TERM=alacritty
+
 
 
 export LANG="en_US.UTF-8"
