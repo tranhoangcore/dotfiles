@@ -12,8 +12,10 @@ alias update='sudo apt update && sudo apt upgrade'
 #What is dns website?
 alias dns="dnscrypt-proxy -resolve"
 
-// For Googler
-// for Google Videos (any source)
+# Random username
+alias username='pwgen -c -n -s -1 | cclip'
+# For Googler
+#for Google Videos (any source)
 alias v='googler -V --url-handler mpv $argv'
-// for site-specific videos (e.g. YouTube)
+# for site-specific videos (e.g. YouTube)
 alias yv='googler -w youtube.com --url-handler mpv $argv'

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/var/lib/i2pd'
 let g:netrw_dirhist_6='/home/core/Documents/Algorithms/week6_dynamic_programming2'
 let g:netrw_dirhist_5='/home/core/Documents/Algorithms/week6_dynamic_programming2/2_partitioning_souvenirs'
 let g:netrw_dirhist_4='/home/core/Documents/Algorithms/week6_dynamic_programming2'
