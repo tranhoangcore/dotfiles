@@ -13,7 +13,7 @@ alias update='sudo apt update && sudo apt upgrade'
 alias dns="dnscrypt-proxy -resolve"
 
 # Random username
-alias username='pwgen -c -n -s -1 | cclip'
+alias username='pwgen -A -n -s -1 | cclip'
 # For Googler
 #for Google Videos (any source)
 alias v='googler -V --url-handler mpv $argv'
