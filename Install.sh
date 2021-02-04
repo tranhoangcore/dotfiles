@@ -1,3 +1,6 @@
+yay -S pulseaudio pavucontrol
+
+
 #Oh My ZSH
 sudo apt install -y git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -10,12 +13,44 @@ fc-cache -vf
 ln -s /home/core/Documents/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s /home/core/Documents/dotfiles/.aliases ~/.aliases
 ln -s /home/core/Documents/dotfiles/.functions ~/.functions
+ln -s /home/core/Documents/dotfiles/.profile  ~/.profile
+
+#alacritty
+
+ln -s /home/core/Documents/dotfiles/.config/alacritty /home/core/.config/alacritty
 
 
+#Picom
+ln -s /home/core/Documents/dotfiles/.config/picom ~/.config/picom 
+
+#Dunst
+ln -s /home/core/Documents/dotfiles/.config/dunst ~/.config/dunst
+
+#Polybar
+ln -s /home/core/Documents/dotfiles/.config/polybar ~/.config/polybar
+
+
+#
+ln -s /home/core/Documents/dotfiles/.config/sxiv ~/.config/sxiv
+
+
+#rofi
+
+ln -s /home/core/Documents/dotfiles/.config/rofi ~/.config/rofi 
+
+
+#i3
+
+ln -s /home/core/Documents/dotfiles/.config/i3 ~/.config/i3
+
+
+#htop
+
+ln -s ~/Documents/dotfiles/.config/htop ~/.config/htop
 #Ranger
 sudo apt install ranger caca-utils highlight atool w3m poppler-utils mediainfo
 ranger --copy-config=all
-ln -s /home/core/Documents/dotfiles/ranger/rc.conf /home/core/.config/ranger/rc.conf
+ln -s /home/core/Documents/dotfiles/.config/ranger/rc.conf /home/core/.config/ranger/rc.conf
 
 
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
@@ -25,7 +60,7 @@ make install
 #Emacs
 sudo apt install emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-
+ln -s /home/core/Documents/dotfiles/.spacemacs ~/.spacemacs 
 #Sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -51,3 +86,8 @@ sudo apt install sxiv
 #Vim
 curl -sLf https://spacevim.org/install.sh | zsh
 ln -s /home/core/Documents/dotfiles/.SpaceVim.d /home/core/.SpaceVim.d 
+
+
+#Chinese Fonts
+
+yay -S noto-fonts-sc noto-fonts-tc

@@ -39,7 +39,7 @@ default_floating_border normal 0
 # start a terminal
 #bindsym $mod+Return exec termite
 
-bindsym $mod+Shift+Return exec kitty 
+bindsym $mod+Shift+Return exec alacritty -e "tmux" 
 #bindsym $mod+Return exec kitty 
 bindsym $mod+Return exec alacritty 
 
@@ -318,7 +318,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 
 
 #Redshift
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+#exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 #exec --no-startup-id redshift-gtk
 
 bindsym $mod+Shift+i exec redshift-gtk -t 3700:3700 # -g 03.5
@@ -345,12 +345,14 @@ bindsym $mod+x mode "$mode_display"
 
 # Start Applications
 bindsym $mod+q exec google-chrome-stable
+bindsym $mod+b exec firefox
 bindsym Control+$mod+e exec --no-startup-id emacsclient -nw
-# bindsym $mod+F3 exec ranger
+bindsym $mod+F3 exec alacritty -e "ranger"
+bindsym $mod+F1 exec alacritty -e "htop"
 bindsym $mod+Shift+F3 exec pcmanfm
 bindsym $mod+Shift+f exec spacefm
 bindsym $mod+c exec code
-bindsym $mod+m exec thunderbird
+bindsym $mod+Shift+v exec alacritty -e "nvim"
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym $mod+Print --release exec --no-startup-id scrot -w
@@ -429,7 +431,7 @@ exec_always --no-startup-id dunst
 
 #Tray
 exec_always --no-startup-id nm-applet
-
+#exec_always --no-startup-id opensnitch-gui
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 

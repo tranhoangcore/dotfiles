@@ -357,6 +357,7 @@ source /usr/share/fzf/completion.zsh
 #source $HOME/.keychain/$(hostname)-sh
 # source $HOME/.keychain/$(hostname)-sh-gpg
 
+eval `keychain --eval --agents ssh id_rsa`
 
 # Clear screen
 clear
